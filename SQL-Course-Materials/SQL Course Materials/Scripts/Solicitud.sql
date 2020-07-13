@@ -1,4 +1,4 @@
-SELECT name AS nombre,
-		unit_price AS 'Precio actual',
-        unit_price * 1.1 AS 'Aumento crack'
-FROM sql_inventory.products;
+-- Uso de la palabra especial WHERE, la cual selecciona las entradas por una condición de una columna
+SELECT *
+FROM customers
+WHERE points > 3000
