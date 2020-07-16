@@ -1,4 +1,4 @@
--- Ejercicio: Devolver los productos en la tabla "products" cuya cantidad sea igual a 49, 38 y 72
+-- Uso de sentencia BETWEEN
 SELECT * 
-FROM sql_store.products
-WHERE quantity_in_stock IN (49, 38, 72)
+FROM sql_store.customers
+WHERE points BETWEEN 1000 AND 3000
