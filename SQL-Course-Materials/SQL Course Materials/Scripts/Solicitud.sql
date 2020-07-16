@@ -1,4 +1,4 @@
--- Ejercicio: De la tabla order_items obtener de la order #6 los items que sobrepasen el precio $30
+-- Ejemplo de la sentencia IN
 SELECT * 
-FROM sql_store.order_items
-WHERE (order_id = 6) AND ((quantity*unit_price)>=30)
+FROM sql_store.customers
+WHERE state IN ('VA', 'FL', 'GA')
