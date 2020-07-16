@@ -1,6 +1,5 @@
--- Ejercicio: Traer a los consumidores que su dirección contenga TRAIL o AVENUE
+-- Ejercicio: Traer a los consumidores que su teléfono termine con el "9"
 SELECT * 
 FROM sql_store.customers
-WHERE address LIKE '%TRAIL%' OR
-	  address LIKE '%AVENUE%'
+WHERE phone LIKE '%9'
 
