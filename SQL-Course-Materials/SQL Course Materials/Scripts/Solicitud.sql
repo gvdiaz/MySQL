@@ -1,5 +1,6 @@
--- Ejercicio: Traer a los consumidores que su teléfono termine con el "9"
+-- Uso de REGEXP (Expresión regular), el mismo en este ejercicio indica que en cualquier lado donde esté "field" va a devolver el item
 SELECT * 
 FROM sql_store.customers
-WHERE phone LIKE '%9'
+
+WHERE last_name REGEXP 'field'
 
