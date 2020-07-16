@@ -1,5 +1,4 @@
--- Uso de condicionales para sentencia WHERE (OR, AND)
+-- Ejercicio: De la tabla order_items obtener de la order #6 los items que sobrepasen el precio $30
 SELECT * 
-FROM sql_store.customers
--- En este caso va a traer os resultados que cumplan alguna de las dos condiciones
-WHERE birth_date > '1990-01-01' OR points > 1000
+FROM sql_store.order_items
+WHERE (order_id = 6) AND ((quantity*unit_price)>=30)
