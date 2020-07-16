@@ -1,4 +1,5 @@
--- Ejercicio propuesto en minuto 42:33 del curso https://www.youtube.com/watch?v=7S_tz1z_5bA&t=624s
+-- Uso de condicionales para sentencia WHERE (OR, AND)
 SELECT * 
-FROM sql_store.orders
-WHERE order_date > '2018-12-01'
+FROM sql_store.customers
+-- En este caso va a traer os resultados que cumplan alguna de las dos condiciones
+WHERE birth_date > '1990-01-01' OR points > 1000
