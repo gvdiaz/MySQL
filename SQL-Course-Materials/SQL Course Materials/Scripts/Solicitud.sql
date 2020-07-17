@@ -1,5 +1,4 @@
--- Uso de REGEXP (Expresión regular), el mismo en este ejercicio indica que en cualquier lado donde esté "field" va a devolver el item
--- Me quedé en el minuto 1:04:26
+-- Uso de REGEXP (Expresión regular), el mismo en este ejercicio indica que muestre items que empiecen con "field".
 SELECT * 
 FROM sql_store.customers
 -- '^' significa que la cadena de caracteres empieza con field
