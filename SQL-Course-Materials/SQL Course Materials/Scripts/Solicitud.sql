@@ -1,4 +1,4 @@
--- Uso de REGEXP (Expresión regular), uso de '[]' y '-' dentro del paréntesis. Indica que va de a a la h.
+-- Ejercicio 1: Traer los clientes que su nombre sea ELKA o AMBUR
 SELECT * 
 FROM sql_store.customers
-WHERE last_name REGEXP 'f[a-h]'
+WHERE first_name REGEXP 'ELKA|AMBUR'
