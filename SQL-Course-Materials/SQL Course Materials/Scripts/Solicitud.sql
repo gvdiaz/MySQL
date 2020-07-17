@@ -1,4 +1,4 @@
--- Ejercicio 1: Traer los clientes que su nombre sea ELKA o AMBUR
+-- Ejercicio 2: Traer los clientes que su apellido termine con EY o ON
 SELECT * 
 FROM sql_store.customers
-WHERE first_name REGEXP 'ELKA|AMBUR'
+WHERE last_name REGEXP 'ON$|EY$'
