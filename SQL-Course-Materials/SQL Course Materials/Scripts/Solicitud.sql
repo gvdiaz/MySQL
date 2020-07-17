@@ -1,4 +1,4 @@
--- Ejercicio: Traer todas las órdenes de la tabla 'orders' que no embarcadas
+-- Uso de la sentencia ORDER BY, sirve para ordernar lo que se seleccione de manera ascendente o descendente
 SELECT * 
-FROM sql_store.orders
-WHERE shipped_date IS NULL
+FROM sql_store.customers
+ORDER BY first_name, address DESC
