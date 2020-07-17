@@ -1,4 +1,4 @@
--- Ejercicio 3: Traer los clientes que su apellido empiece con MY o contenga SE
+-- Ejercicio 4: Traer los clientes que su apellido contengan B seguido de R o U
 SELECT * 
 FROM sql_store.customers
-WHERE last_name REGEXP '^MY|SE'
+WHERE last_name REGEXP 'b[ru]'
