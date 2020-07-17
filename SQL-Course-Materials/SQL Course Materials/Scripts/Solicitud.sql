@@ -1,5 +1,4 @@
--- Uso de REGEXP (Expresión regular) y uso de '[]'. Dentro de los [] puede haber cualquiera de las opciones especificadas dentro-
+-- Uso de REGEXP (Expresión regular), uso de '[]' y '-' dentro del paréntesis. Indica que va de a a la h.
 SELECT * 
 FROM sql_store.customers
--- '^' significa que la cadena de caracteres empieza con field
-WHERE last_name REGEXP 'f[miaeou]'
+WHERE last_name REGEXP 'f[a-h]'
