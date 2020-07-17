@@ -1,4 +1,5 @@
--- Uso de la sentencia ORDER BY, sirve para ordernar lo que se seleccione de manera ascendente o descendente
-SELECT * 
-FROM sql_store.customers
-ORDER BY first_name, address DESC
+-- Ejercicio de la sentencia ORDER BY agregando una columna a SELECT y su alias 
+SELECT *, quantity*unit_price AS precio_total 
+FROM sql_store.order_items
+WHERE order_id = 2
+ORDER BY precio_total DESC;
