@@ -1,4 +1,4 @@
--- Uso de la sentencia 'NULL' en base de datos
+-- Ejercicio: Traer todas las órdenes de la tabla 'orders' que no embarcadas
 SELECT * 
-FROM sql_store.customers
-WHERE phone IS NULL
+FROM sql_store.orders
+WHERE shipped_date IS NULL
