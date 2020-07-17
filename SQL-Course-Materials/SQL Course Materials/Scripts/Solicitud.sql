@@ -1,4 +1,4 @@
--- Ejercicio 4: Traer los clientes que su apellido contengan B seguido de R o U
+-- Uso de la sentencia 'NULL' en base de datos
 SELECT * 
 FROM sql_store.customers
-WHERE last_name REGEXP 'b[ru]'
+WHERE phone IS NULL
