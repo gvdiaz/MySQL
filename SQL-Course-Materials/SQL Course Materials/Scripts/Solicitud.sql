@@ -1,4 +1,5 @@
 -- Uso JOIN con una tabla entre si
+-- Comentario de avance hasta minuto 1:40:25
 USE sql_hr;
 
 SELECT 	e.employee_id,
