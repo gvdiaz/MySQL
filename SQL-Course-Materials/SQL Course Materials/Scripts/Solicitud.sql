@@ -1,14 +1,17 @@
--- Uso JOIN con dos tablas
--- Ejercicio propuesto de 1:41:33
+-- Ejercicio: Utilizar DB sql_invoicing para presentar la info de pagos con mas detalles
+	-- ID cliente
+    -- Cantidad de pago
+    -- Nombre cliente
+    -- Método de pago
+-- Ejercicio propuesto de 1:44:45
 
-USE sql_store;
+USE sql_invoicing;
 
-SELECT 	o.order_id AS Orden_id,
-		o.order_date AS Fecha_orden,
-        c.first_name AS Nombre,
-        c.last_name AS Apellido,
-        os.name AS Estado
+SELECT 	p.payment_id AS Id_pago, -- tabla payments, este dato no hacía falta
+		p.amount AS pago,		-- Tabla payments
+		c.name AS Nombre,		-- Tabla clients
+        pm.name AS Método_pago	-- Tabla payment_methods
 
-FROM orders o
-JOIN customers c ON o.customer_id = c.customer_id
-JOIN order_statuses os ON o.status = os.order_status_id
+FROM payments p
+JOIN clients c ON p.client_id = c.client_id
+JOIN payment_methods pm ON p.payment_method = pm.payment_method_id
