@@ -1,17 +1,14 @@
--- Ejercicio: Utilizar DB sql_invoicing para presentar la info de pagos con mas detalles
-	-- ID cliente
-    -- Cantidad de pago
-    -- Nombre cliente
-    -- Método de pago
--- Ejercicio propuesto de 1:44:45
+-- Uso de OUTER JOIN (LEFT o RIGHT)
 
-USE sql_invoicing;
+-- Ejercicio propuesto de 1:56:00 (Eh mas o menos
 
-SELECT 	p.payment_id AS Id_pago, -- tabla payments, este dato no hacía falta
-		p.amount AS pago,		-- Tabla payments
-		c.name AS Nombre,		-- Tabla clients
-        pm.name AS Método_pago	-- Tabla payment_methods
+USE sql_store;
 
-FROM payments p
-JOIN clients c ON p.client_id = c.client_id
-JOIN payment_methods pm ON p.payment_method = pm.payment_method_id
+SELECT	
+		c.customer_id,
+		c.first_name,
+        o.order_id
+
+FROM customers c
+LEFT JOIN orders o ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
