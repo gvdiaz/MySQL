@@ -1,14 +1,23 @@
--- Ejercicio CROSS JOIN: Hacer un CROSS JOIN entre shippers y products de manera implícita
+-- Uso de UNION: Une dos búsquedas
 
--- Ejercicio propuesto de 2:17:00
+-- Ejercicio propuesto de 2:21:00
 
 USE sql_store;
 
 SELECT	
-		sh.name AS Empresa_envío,
-        p.name AS Productos
-		-- c.first_name AS consumidor,
-        -- p.name AS product
+		order_id AS Id_orden,
+        order_date AS Productos,
+        'Activo' AS Estado
         
-FROM shippers sh, products p
-ORDER BY sh.name
+FROM orders
+WHERE order_date >= '2019-01-01'
+
+UNION
+
+SELECT	
+		order_id AS Id_orden,
+        order_date AS Productos,
+        'Archivado' AS Estado
+        
+FROM orders
+WHERE order_date < '2019-01-01'
