@@ -1,21 +1,13 @@
--- Uso de INSERT: Inserta una fila
+-- Uso de INSERT: Inserta varias líneas en un solo script
 
--- Ejercicio propuesto de 2:35:00
+-- Ejercicio propuesto de 2:37:00
 
 USE sql_store;
 
-INSERT INTO customers (
-	first_name,
-    last_name,
-    birth_date,
-    address,
-    city,
-    state)
-VALUES (
-	'John',
-    'Frusciante',
-    DEFAULT,
-    'Andonaegui 200',
-    'La Ferrere',
-    'CN')
+INSERT INTO shippers (
+	name)
+    
+VALUES 	('Shipper 1'),
+		('Shipper 2'),
+        ('Shipper 3')
 
