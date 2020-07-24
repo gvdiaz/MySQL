@@ -1,15 +1,13 @@
--- Uso de sentencia USING -> Se utiliza para unir (JOIN) dos columnas en distintas tablas pero que tienen la misma denominación
+-- Uso de sentencia CROSS JOINI -> Se utiliza para unir (JOIN) dos tablas y relacionar todas las combinaciones posibles
 
--- Ejercicio propuesto de 2:09:00
+-- Ejercicio propuesto de 2:16:00
 
 USE sql_store;
 
 SELECT	
-		o.order_id,
-        c.first_name
+		c.first_name AS consumidor,
+        p.name AS product
         
-FROM orders o
-JOIN customers c
-	-- ON o.customer_id = c.customer_id
-    USING (customer_id) -- Esta línea reemplaza a la anterior (es más corta y más legible.
-    
+FROM customers c
+CROSS JOIN products p
+ORDER BY c.first_name
