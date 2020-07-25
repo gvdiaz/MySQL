@@ -1,9 +1,10 @@
 -- Ejercicio copiar base de datos invoices pero solo los que hayan pagado
--- Paso 1: Copio la tabla
+-- Paso 2: Copiado solo los que no eran NULL
 
--- Ejercicio propuesto de 2:48:00
+-- Ejercicio propuesto de 2:49:00
 
 USE sql_invoicing;
-CREATE TABLE invoices_payed
+INSERT INTO invoices_payed
 SELECT *
 FROM invoices
+WHERE (payment_date IS NOT NULL)
