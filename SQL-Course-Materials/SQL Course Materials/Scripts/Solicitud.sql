@@ -1,10 +1,9 @@
--- Ejercicio copiar base de datos invoices pero solo los que hayan pagado
--- Paso 2: Copiado solo los que no eran NULL
+-- Ejercicio de UPDATE: Dar a los customers nacidos antes de 1990 50 puntos extra
+-- Ejercicio propuesto de 3:00:00
 
--- Ejercicio propuesto de 2:49:00
+USE sql_store;
 
-USE sql_invoicing;
-INSERT INTO invoices_payed
-SELECT *
-FROM invoices
-WHERE (payment_date IS NOT NULL)
+UPDATE customers
+SET
+	points = points + 50
+WHERE birth_date < '1990-01-01'
