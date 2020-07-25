@@ -1,13 +1,15 @@
--- Uso de INSERT: Inserta varias líneas en un solo script
+-- Ejercicio INSERT: Ingresar tres filas en la tabla de "products"
 
 -- Ejercicio propuesto de 2:37:00
 
 USE sql_store;
 
-INSERT INTO shippers (
-	name)
+INSERT INTO products (
+    name,
+    quantity_in_stock,
+    unit_price)
     
-VALUES 	('Shipper 1'),
-		('Shipper 2'),
-        ('Shipper 3')
+VALUES 	('Arroz',5,0.5),
+		('Arroz carnolli',10,0.7),
+        ('Spaguetti',10,0.5)
 
