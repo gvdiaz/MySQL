@@ -1,6 +1,8 @@
-# Descripción: Creación de base de datos
+# Descripción: Acceso de base de datos
 # Autor: Gustavo V. Diaz
 # Fecha: 31/07/2020
+# Referencia: Acceso a base de datos
+# URL: https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html
 
 import mysql.connector
 from mysql.connector import errorcode
