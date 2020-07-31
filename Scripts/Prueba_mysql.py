@@ -9,6 +9,7 @@ try:
   cnx = mysql.connector.connect(user='lector',
                                 database='events',
                                 password='bambam33',
+                                auth_plugin='mysql_native_password',
                                 host='localhost')
 except mysql.connector.Error as err:
   if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
