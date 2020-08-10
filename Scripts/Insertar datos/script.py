@@ -14,19 +14,20 @@ cursor = cnx.cursor()
 tomorrow = datetime.now().date() + timedelta(days=1)
 
 add_employee = ("INSERT INTO employees "
-               "(first_name, last_name, hire_date, gender, birth_date) "
-               "VALUES (%s, %s, %s, %s, %s)")
+               "(emp_no,first_name, last_name, hire_date, gender, birth_date) "
+               "VALUES (%s, %s, %s, %s, %s, %s)")
 add_salary = ("INSERT INTO salaries "
               "(emp_no, salary, from_date, to_date) "
               "VALUES (%(emp_no)s, %(salary)s, %(from_date)s, %(to_date)s)")
 
-data_employee = ('Geert', 'Vanderkelen', tomorrow, 'M', date(1977, 6, 14))
+emp_no = cursor.lastrowid
+
+data_employee = (emp_no, 'Geert', 'Vanderkelen', tomorrow, 'M', date(1977, 6, 14))
 
 # Insert new employee
 
-cursor.execute(add_employee, data_employee)
-
 emp_no = cursor.lastrowid
+cursor.execute(add_employee, data_employee)
 
 # Insert salary information
 data_salary = {
